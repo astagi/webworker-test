@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Fibonacci</h1>
+    <input v-model.number="inputNumber" type="number"/>
+    <button @click="calculate()">Calculate</button>
+    <div class='result'>Result: {{result}}</div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import fibonacci from './fibonacci'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      inputNumber: 0,
+      result:  0
+    }
+  },
+  methods: {
+    calculate() {
+      this.result = fibonacci(this.inputNumber)
+    }
   }
 }
 </script>
@@ -24,5 +34,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.result {
+  padding: 1rem;
 }
 </style>
