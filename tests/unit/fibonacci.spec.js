@@ -1,7 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 import App from '@/App.vue'
 
-jest.mock("@/fibonacci.worker")
 
 describe('Fibonacci App.vue', () => {
   it('should calculate Fibonacci number', async () => {

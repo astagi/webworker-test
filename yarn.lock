@@ -6704,6 +6704,11 @@ mississippi@^3.0.0:
     stream-each "^1.1.0"
     through2 "^2.0.0"
 
+mitt@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/mitt/-/mitt-2.1.0.tgz#f740577c23176c6205b121b2973514eade1b2230"
+  integrity sha512-ILj2TpLiysu2wkBbWjAmww7TkZb65aiQO+DkVdUTBpBXq+MHYiETENkKFMtsJZX1Lf4pe4QOrTSjIfUwN5lRdg==
+
 mixin-deep@^1.2.0:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/mixin-deep/-/mixin-deep-1.3.2.tgz#1120b43dc359a785dce65b55b82e257ccf479566"
@@ -10025,6 +10030,13 @@ worker-loader@^3.0.3:
   dependencies:
     loader-utils "^2.0.0"
     schema-utils "^2.7.0"
+
+workerloader-jest-transformer@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/workerloader-jest-transformer/-/workerloader-jest-transformer-0.0.2.tgz#4cb2ec05c9c2bb602193cccd2f872f4b694898a9"
+  integrity sha512-rA0taE/NT5orrJH3mfscU/q+Vk+UlPAZWQVfZfeZt8HrrieB6zQ7YFHQLoR82VZJ62OVTVK0pco5Kta46xgEgQ==
+  dependencies:
+    mitt "^2.1.0"
 
 wrap-ansi@^5.1.0:
   version "5.1.0"
