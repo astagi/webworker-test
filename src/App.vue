@@ -1,26 +1,30 @@
 <template>
   <div id="app">
-    <h1>Fibonacci</h1>
-    <input v-model.number="inputNumber" type="number"/>
+    <h1>Fibonacci 🌀</h1>
+    <input v-model.number="inputNumber" type="number" placeholder="Insert a number"/>
     <button @click="calculate()">Calculate</button>
-    <div class='result'>Result: {{result}}</div>
+    <div v-if="result" class='result'>Result: {{result}}</div>
   </div>
 </template>
 
 <script>
-import fibonacci from './fibonacci'
+import Worker from './fibonacci.worker'
+const worker = new Worker();
 
 export default {
   name: 'App',
   data () {
     return {
       inputNumber: 0,
-      result:  0
+      result: null
     }
   },
   methods: {
     calculate() {
-      this.result = fibonacci(this.inputNumber)
+      worker.onmessage = ({data}) => {
+        this.result = data
+      };
+      worker.postMessage(this.inputNumber);
     }
   }
 }
