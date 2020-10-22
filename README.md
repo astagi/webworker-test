@@ -1,5 +1,8 @@
 # webworker-test
 
+This is the source code for VueDose article [How to test Web Workers with Jest](https://vuedose.tips/how-to-test-web-workers-with-jest). 
+Learn how easy is to test a Webpack-bundled Web Worker with Jest!
+
 ## Project setup
 ```
 yarn install
